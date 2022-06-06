@@ -8,7 +8,8 @@
         <span class="menu-icon-close"><i class="fa fa-times" aria-hidden="true"></i></span>
         <ul>
         {% assign pages = site.pages | sort: "order" %}
-          {{pages}}
+          {{pages | map: "order"}}
+          {{pages | map: "url"}}
         {% for page in pages %}
           {% if page.title %}
           <li><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></li>
