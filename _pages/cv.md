@@ -2,6 +2,7 @@
 layout: home-page
 title: CV
 permalink: /cv/
+order: 2
 ---
 
 ## Currently
