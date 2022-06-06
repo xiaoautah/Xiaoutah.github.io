@@ -5,6 +5,7 @@ order: 1
 ---
 {% include author-box.html %}
 <ol class="post-card-box clearfix">
+  {{paginator.posts}}
   {% for post in paginator.posts %}
   <li>
     <div class="post-card">
