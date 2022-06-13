@@ -12,5 +12,7 @@
     {% assign color = site.colors[i] %}
   {% endunless %}
   {% assign style = "background: " | append: color %}
+  {% assign i = i|plus:1 %}
+
 {% endif %}
 <a href="{{include.post.url | prepend: site.baseurl}}" class="{{include.class}}" style="{{style}}"></a>
