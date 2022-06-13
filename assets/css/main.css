@@ -1761,3 +1761,8 @@ pre code {
     margin: 0 0 15px;
   }
 }
+
+.CV {
+  list-style-position: inside;
+  text-align: center;
+}
