@@ -9,13 +9,13 @@ order: 1
   {% for post in paginator.posts %}
   <li>
     <div class="post-card">
-      {{i}}
+      {{site.colors}}
       {% if post.img %}
       {% assign link = "/assets/img/" | prepend: site.baseurl | append : post.img %}
       {% assign style = "background-image: url(" | append: link | append: ")" %}
       {% else %}
       {% assign color = site.colors[i] %}
-      {% if color %}
+      {% unless color %}
         {% assign i = 0 %}
         {% assign color = site.colors[i] %}
       {% endif %}
