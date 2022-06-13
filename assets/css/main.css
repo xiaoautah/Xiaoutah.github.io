@@ -1767,3 +1767,7 @@ pre code {
   text-align: center;
 }
 
+.Home .page-title {
+  display: none;
+}
+
