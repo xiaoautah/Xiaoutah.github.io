@@ -13,6 +13,5 @@
   {% endunless %}
   {% assign style = "background: " | append: color %}
   {% assign i = i|plus:1 %}
-
 {% endif %}
-<a href="{{post.url | prepend: site.baseurl}}" class="{{include.class}}" style="{{style}}"></a>
+{{style}}
