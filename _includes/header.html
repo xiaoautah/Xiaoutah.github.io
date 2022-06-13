@@ -12,7 +12,7 @@
           {{site.paginate_path}}
           {% unless page.url contains 'page' %}
           <li><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></li>
-          {% endif %}
+          {% endunless %}
         {% endfor %}
         </ul>
       </nav>
