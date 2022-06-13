@@ -5,7 +5,6 @@ permalink: /cv/
 order: 2
 ---
 
-{:.cv}
 ## Currently
 
 Current Position Description
