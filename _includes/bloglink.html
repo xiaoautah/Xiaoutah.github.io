@@ -1,6 +1,5 @@
-  {{post | inspect }}
-{% if include.post.img %}
-  {% if include.post.img contains 'http' %}
+{% if post.img %}
+  {% if post.img contains 'http' %}
     {% assign link = post.img %}
   {% else %}
     {% assign link = "/assets/img/" | prepend: site.baseurl | append : post.img %}
