@@ -46,3 +46,4 @@ plugins:
 
 include: [_pages]
 exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock", "package-lock.json", "assets/css/sass/"]
+colors: ["linear-gradient(90deg, lightcoral, white,lightcoral)", "linear-gradient(90deg, lightorange, white,lightorange)", "linear-gradient(90deg, lightyellow, white,lightyellow)"]
