@@ -3,8 +3,6 @@ title: Blog
 order: 2
 layout: home-page
 ---
-
-
 {% assign i = 0 %}
 <ol class="post-card-box clearfix">
   {% for post in paginator.posts %}
@@ -37,3 +35,4 @@ layout: home-page
   </li>
   {% endfor %}
 </ol>
+{% include pagination.html %}
