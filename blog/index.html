@@ -8,7 +8,7 @@ layout: home-page
   {% for post in paginator.posts %}
   <li>
     <div class="post-card">
-      <a href="{{post.url | prepend: site.baseurl}}" class="{{include.class}}" style="{% include bloglinkstyle.html %}"></a>
+      <a href="{{post.url | prepend: site.baseurl}}" class="post-card-image" style="{% include bloglinkstyle.html %}"></a>
 
       <div class="post-card-body">
         {% for tag in post.tags %}
