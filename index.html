@@ -11,9 +11,9 @@ order: 1
       {{loop.count}}
       {% if post.img %}
       {% assign link = "/assets/img/" | prepend: site.baseurl | append : post.img %}
-      {% assign style = 'background-image: url(' + link ')' %}
+      {% assign style = "background-image: url(" | append: link | append: ")" %}
       {% else %}
-      {% assign style = 'background: ' + site.colors[loop.count] %}
+      {% assign style = "background: " | append: site.colors[loop.count] %}
       {% endif %}
       {{style}}
       <a href="{{post.url | prepend: site.baseurl}}" class="post-card-image" style="{{style}}">
