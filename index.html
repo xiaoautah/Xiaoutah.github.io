@@ -4,18 +4,25 @@ title: Home
 order: 1
 ---
 {% include author-box.html %}
+{% assign i = 0 %}
 <ol class="post-card-box clearfix">
   {% for post in paginator.posts %}
   <li>
     <div class="post-card">
-      {{loop.count}}
+      {{i}}
       {% if post.img %}
       {% assign link = "/assets/img/" | prepend: site.baseurl | append : post.img %}
       {% assign style = "background-image: url(" | append: link | append: ")" %}
       {% else %}
-      {% assign style = "background: " | append: site.colors[loop.count] %}
+      {% assign color = site.colors[i] %}
+      {% if color %}
+        {% assign i = 0 %}
+        {% color = site.colors[i] %}
       {% endif %}
-      {{style}}
+      {% assign style = "background: " | append: color %}
+      {% assign i = i|plus:1 %}
+
+      {% endif %}
       <a href="{{post.url | prepend: site.baseurl}}" class="post-card-image" style="{{style}}">
       </a>
 
