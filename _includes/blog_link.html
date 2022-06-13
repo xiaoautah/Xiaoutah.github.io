@@ -1,0 +1,17 @@
+  {{post | inspect }}
+{% if include.post.img %}
+  {% if include.post.img contains 'http' %}
+    {% assign link = post.img %}
+  {% else %}
+    {% assign link = "/assets/img/" | prepend: site.baseurl | append : post.img %}
+  {% endif %}
+  {% assign style = "background-image: url(" | append: link | append: ")" %}
+{% else %}
+  {% assign color = site.colors[i] %}
+  {% unless color %}
+    {% assign i = 0 %}
+    {% assign color = site.colors[i] %}
+  {% endunless %}
+  {% assign style = "background: " | append: color %}
+{% endif %}
+<a href="{{include.post.url | prepend: site.baseurl}}" class="{{include.class}}" style="{{style}}"></a>
