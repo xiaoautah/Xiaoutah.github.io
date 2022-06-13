@@ -10,7 +10,6 @@
         {% assign pages = site.pages | where_exp: 'item', 'item.title' | sort: "order" %}
         {% for page in pages %}
           {% assign blogpaths =  site.paginate_path | split: ":" | first %}
-          {{blogpaths | inspect}}
           {% unless page.url contains blogpaths %}
           <li><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></li>
           {% endunless %}
