@@ -1,9 +1,18 @@
 <div class="recent-box">
   <h2 class="recent-title">Recent post</h2>
   <div class="recent-list">
+    {% assign i = 0 %}
     {% for post in site.posts offset:0 limit:4 %}
       {% if post.title %}
-        <a href="{{ root_url }}{{ post.url | prepend: site.baseurl }}" class="recent-item" style="background: url({{"/assets/img/" | prepend: site.baseurl | append : post.img}}) center no-repeat; background-size: cover;"><span>{{ post.title }}</span></a>
+          {% if post.img %}
+            {% assign link = "/assets/img/" | prepend: site.baseurl | append : post.img %}
+            {% assign style = "background-image: url(" | append: link | append: ")" | append: " center no-repeat; background-size: cover;" %}
+      {% else %}
+      {% assign color = site.colors[i] %}
+      {% assign style = "background: " | append: color %}
+      {% assign i = i|plus:1 %}
+      {% endif %}
+        <a href="{{ root_url }}{{ post.url | prepend: site.baseurl }}" class="recent-item" style="{{style}}"><span>{{ post.title }}</span></a>
       {% endif %}
     {% endfor %}
   </div>
