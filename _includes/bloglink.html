@@ -1,4 +1,5 @@
 {% if post.img %}
+{{post.img contains 'http'}}
   {% if post.img contains 'http' %}
     {% assign link = post.img %}
   {% else %}
@@ -15,4 +16,4 @@
   {% assign i = i|plus:1 %}
 
 {% endif %}
-<a href="{{include.post.url | prepend: site.baseurl}}" class="{{include.class}}" style="{{style}}"></a>
+<a href="{{post.url | prepend: site.baseurl}}" class="{{include.class}}" style="{{style}}"></a>
