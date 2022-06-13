@@ -6,7 +6,12 @@ layout: default
   <article class="article-page">
     {% if page.img %}
     <div class="page-image">
-      <div class="cover-image" style="background: url({{"/assets/img/" | prepend: site.baseurl | append : page.img}}) center no-repeat; background-size: cover;"></div>
+      {% if page.img contains 'http' %}
+      {% assign imgurl = page.img %}
+      {% else %}
+      {% assign imgurl = "/assets/img/" | prepend: site.baseurl | append : page.img %}
+      {% endif %}
+      <div class="cover-image" style="background: url({{imgurl}}) center no-repeat; background-size: cover;"></div>
     </div>
     {% endif %}
     <div class="wrapper">
