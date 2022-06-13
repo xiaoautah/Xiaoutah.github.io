@@ -18,11 +18,11 @@ order: 1
       {% unless color %}
         {% assign i = 0 %}
         {% assign color = site.colors[i] %}
-      {% endif %}
+      {% endunless %}
       {% assign style = "background: " | append: color %}
       {% assign i = i|plus:1 %}
 
-      {% endunless %}
+      {% endif %}
       <a href="{{post.url | prepend: site.baseurl}}" class="post-card-image" style="{{style}}">
       </a>
 
