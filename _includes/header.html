@@ -7,10 +7,10 @@
       <nav class="main-nav">
         <span class="menu-icon-close"><i class="fa fa-times" aria-hidden="true"></i></span>
         <ul>
-        {% assign pages = site.pages | sort: "order" %}
-          {{pages | map: "url" |  inspect}}
+        {% assign pages = site.pages | where: 'title' | sort: "order" %}
         {% for page in pages %}
-          {% if page.title %}
+          {{site.paginate_path}}
+          {% unless page.url contains 'page' %}
           <li><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></li>
           {% endif %}
         {% endfor %}
