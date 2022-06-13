@@ -9,7 +9,7 @@ layout: home-page
   <li>
     <div class="post-card">
       {% include blog_link i=i post=post class='post-card-image' %}
-      {% assign i = 0 |plus: 1%} 
+      {% assign i = i|plus:1 %}
       <div class="post-card-body">
         {% for tag in post.tags %}
         <a href="{{site.baseurl}}/tags#{{tag}}" class="tag">|&#32;{{ tag }}</a>
