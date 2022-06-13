@@ -10,9 +10,9 @@ order: 1
     <div class="post-card">
       linear-gradient(90deg, lightcoral, white, lightcoral)
       {% if post.img %}
-      {% set style = 'background-image: url( {{ "/assets/img/" | prepend: site.baseurl | append : post.img}} )' %}
+      {% assign style = 'background-image: url( {{ "/assets/img/" | prepend: site.baseurl | append : post.img}} )' %}
       {% else %}
-      {% set style = 'background: site.colors[loop.count]' %}
+      {% assign style = 'background: site.colors[loop.count]' %}
       {% endif %}
       {{style}}
       <a href="{{post.url | prepend: site.baseurl}}" class="post-card-image" style="{{style}}">
