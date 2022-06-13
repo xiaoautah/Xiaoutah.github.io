@@ -4,6 +4,7 @@ title: CV
 permalink: /cv/
 order: 2
 ---
+# CV
 
 ## Currently
 
@@ -64,3 +65,9 @@ __Current Job Title__, Current Employer
 
 - Task
 - Task
+
+
+<style>
+   list-style-position: inside;
+    text-align: center;
+</style>
