@@ -22,7 +22,7 @@ order: 1
       {% assign style = "background: " | append: color %}
       {% assign i = i|plus:1 %}
 
-      {% endif %}
+      {% endunless %}
       <a href="{{post.url | prepend: site.baseurl}}" class="post-card-image" style="{{style}}">
       </a>
 
