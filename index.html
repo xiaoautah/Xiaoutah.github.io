@@ -8,7 +8,14 @@ order: 1
   {% for post in paginator.posts %}
   <li>
     <div class="post-card">
-      <a href="{{post.url | prepend: site.baseurl}}" class="post-card-image" style="background-image: url( {{ "/assets/img/" | prepend: site.baseurl | append : post.img}} )">
+      linear-gradient(90deg, lightcoral, white, lightcoral)
+      {% if post.img %}
+      {% set style = 'background-image: url( {{ "/assets/img/" | prepend: site.baseurl | append : post.img}} )' %}
+      {% else %}
+      {% set style = 'background: site.colors[loop.count]' %}
+      {% endif %}
+      {{style}}
+      <a href="{{post.url | prepend: site.baseurl}}" class="post-card-image" style="{{style}}">
       </a>
 
       <div class="post-card-body">
