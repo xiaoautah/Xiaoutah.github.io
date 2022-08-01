@@ -1,21 +1,19 @@
-title: Site Title
+title: AnnElise Xiao
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Welome to my website
 permalink: '/:title/'
 
 # Author settings
-author: Your Name # add your name
+author: AnnEise Xiao
 author-pic: yosh-ginsu.jpg
-about-author: About you
+about-author: MMLIS student at USC. 
 
 # Contact links
-email: # Add your Email address
-phone: # Add your Phone number
+email: xiaoa@usc.edu
+phone: 
 website: # Add your website, do not add http://
-linkedin: # Add your Linkedin handle
-github: #Add your Github handle
+linkedin: Annelise Nicholes Xiao
+github: XiaoUtah
 twitter:  # Add your Twitter handle
 facebook: # Add your Facebook handle
 instagram: # Add your Instagram handle
